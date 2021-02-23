@@ -2,6 +2,7 @@
 <html lang='en'>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0">
     <Title>eCommerce Mockup</Title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -9,6 +10,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
+    <!---Working on this to develop my skills as a frontn end--->
     <div class="header">
       <div class="container">
         <div class="navbar">
@@ -16,7 +18,7 @@
             <img src="images/logo.png" width="125px">
           </div>
           <nav>
-            <ul>
+            <ul id="MenuItems">
               <li><a href="">Home</a></li>
               <li><a href="">Products</a></li>
               <li><a href="">About</a></li>
@@ -25,6 +27,7 @@
             </ul>
           </nav>
           <img src="images/cart.png" width="30px" heigh="30px">
+          <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
         <div class="row">
           <div class="col-2">
@@ -229,7 +232,7 @@
        <div class="row">
          <div class="col-3">
            <i class="fa fa-quote-left"></i>
-           <p>Sometimes life is evil...and you gotta slay the beast before you get respect. Slay that damn beast!</p>
+           <p>This is quiet simply the most WATCHY of the watches I've owned. Is it atomic? No. Is it synced to the abolsute heartbeat of the world? Probs not. But it tells me when I'm done being mansplained.</p>
            <div class="rating">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -238,11 +241,11 @@
             <i class="fa fa-star-o"></i>
            </div>
            <img src="images/user-1.png">
-           <h3>Shopper #1</h3>
+           <h3>Stacey See-Your-Manager Jenkins</h3>
          </div>
          <div class="col-3">
           <i class="fa fa-quote-left"></i>
-          <p>Sometimes life is evil...and you gotta slay the beast before you get respect. Slay that damn beast!</p>
+          <p>As an upstanding citizen of these United States, I enjoy paying monthly dues so that I can go into someone's building and lift their furniture. Bells, weights, ropes, you name it, I'm lifting it. Did my parents know that I'm using the opportunity they gave me to pay people to move THEIR items around? No. But these gains, bruh.</p>
           <div class="rating">
            <i class="fa fa-star"></i>
            <i class="fa fa-star"></i>
@@ -251,11 +254,11 @@
            <i class="fa fa-star-o"></i>
           </div>
           <img src="images/user-2.png">
-          <h3>Shopper #1</h3>
+          <h3>Adolfo Do-You-Even-Lift Dominguez</h3>
         </div>
         <div class="col-3">
           <i class="fa fa-quote-left"></i>
-          <p>Sometimes life is evil...and you gotta slay the beast before you get respect. Slay that damn beast!</p>
+          <p>"None for Gretchen Weiners" was the last thing that flamboyant child ever said. You don't mess with the heiress to the Toaster Stroodle fortune. Your mother shops at Sacs.</p>
           <div class="rating">
            <i class="fa fa-star"></i>
            <i class="fa fa-star"></i>
@@ -264,10 +267,83 @@
            <i class="fa fa-star-o"></i>
           </div>
           <img src="images/user-3.png">
-          <h3>Shopper #1</h3>
+          <h3>Gretchen Weiners</h3>
         </div>
        </div>
      </div>
    </div>
-  </body>
+   <!---------brands ------->
+   <div class="brands">
+     <div class="small-container">
+       <div class="row">
+         <div class="col-5">
+          <img src="images/logo-godrej.png">
+         </div>
+         <div class="col-5">
+           <img src="images/logo-coca-cola.png">
+        </div>
+        <div class="col-5">
+           <img src="images/logo-paypal.png">
+        </div>
+        <div class="col-5">
+           <img src="images/logo-oppo.png">
+        </div>
+        <div class="col-5">
+           <img src="images/logo-philips.png">
+        </div>
+       </div>
+     </div>
+   </div>
+
+   <!-------Footer----->
+   <div class="footer">
+     <div class="container">
+       <div class="row">
+         <div class="footer-col-1">
+           <h3>Download Our Mobile App</h3>
+           <p>Download App for Android and iOS mobile phone.</p>
+           <div class="app-logo">
+             <img src="images/play-store.png">
+             <img src="images/app-store.png">
+           </div>
+         </div>
+         <div class="footer-col-2">
+           <img src="images/logo-white.png">
+           <p>Our purpose is to sustainably make the pleasure and benefits of sports accessible to many.</p>
+         </div>
+         <div class="footer-col-3">
+           <h3>Useful Links</h3>
+           <ul>
+             <li>Coupons</li>
+             <li>Blog Post</li>
+             <li>Return Policy</li>
+             <li>Join Affiliate</li>
+           </ul>
+         </div>
+         <div class="footer-col-4">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+     </div>
+   </div>
+   <!-----JS for toggle menu----->
+   <script>
+     var MenuItems = document.getElementsById("MenuItems");
+     MenuItems.style.maxHeight = "0px";
+     function menutoggle(){
+       if (MenuItems.style.maxHeight == "0px") {
+         ManuItems.style.maxHeight == "200px";
+       } else {
+         ManuItems.style.maxHeight = "0px";
+       }
+     }
+   </script>
+</body>
 </html>
