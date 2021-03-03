@@ -31,12 +31,12 @@
         </div>
         <div class="row">
           <div class="col-2">
-            <h1>Sometimes You Want <br> To Spend Money!</h1>
-            <p>Materialism isn't always bad. When life gives you lemons...<br> juice and sell it!</p>
-            <a class="btn">Explore Now &#8658;</a>
+            <h1 class="col-2-h1">Sometimes You Want <br> To Spend Money!</h1>
+            <p class="col-2-p">Materialism isn't always bad. When life gives you lemons...<br> juice and sell it!</p>
+            <a id="btn" class="col-2-btn">Explore Now &#8658;</a>
           </div>
-          <div class="col-2">
-            <img src="images/image1.png">
+          <div class="col-2" id="col-2-title">
+              <img src="images/image1.png" class="col-2-img1">
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
      <div class="row">
        <div class="col-4">
          <img src="images/product-1.jpg">
-         <h4>Red Printed T-Shirt</h4>
+         <h4>Tony Stark's T-Shirt</h4>
          <div class="rating">
            <i class="fa fa-star"></i>
            <i class="fa fa-star"></i>
@@ -75,7 +75,7 @@
        </div>
        <div class="col-4">
         <img src="images/product-2.jpg">
-        <h4>Red Printed T-Shirt</h4>
+        <h4>Thor's Shoes</h4>
         <div class="rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -87,7 +87,7 @@
       </div>
       <div class="col-4">
         <img src="images/product-3.jpg">
-        <h4>Red Printed T-Shirt</h4>
+        <h4>Spiderman's Pants</h4>
         <div class="rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -99,7 +99,7 @@
       </div>
       <div class="col-4">
         <img src="images/product-4.jpg">
-        <h4>Red Printed T-Shirt</h4>
+        <h4>Ultron's Blue T-Shirt</h4>
         <div class="rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -114,7 +114,7 @@
      <div class="row">
       <div class="col-4">
         <img src="images/product-5.jpg">
-        <h4>Red Printed T-Shirt</h4>
+        <h4>Some Really Old Shoes</h4>
         <div class="rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -126,7 +126,7 @@
       </div>
       <div class="col-4">
        <img src="images/product-6.jpg">
-       <h4>Red Printed T-Shirt</h4>
+       <h4>Puma Jumping Over V</h4>
        <div class="rating">
          <i class="fa fa-star"></i>
          <i class="fa fa-star"></i>
@@ -138,7 +138,7 @@
      </div>
      <div class="col-4">
        <img src="images/product-7.jpg">
-       <h4>Red Printed T-Shirt</h4>
+       <h4>Holy Socks</h4>
        <div class="rating">
          <i class="fa fa-star"></i>
          <i class="fa fa-star"></i>
@@ -150,7 +150,7 @@
      </div>
      <div class="col-4">
        <img src="images/product-8.jpg">
-       <h4>Red Printed T-Shirt</h4>
+       <h4>Tryharder Minimalist Watch</h4>
        <div class="rating">
          <i class="fa fa-star"></i>
          <i class="fa fa-star"></i>
@@ -163,7 +163,7 @@
      <div class="row">
       <div class="col-4">
         <img src="images/product-9.jpg">
-        <h4>Red Printed T-Shirt</h4>
+        <h4>Tryhard Minimalist Watch</h4>
         <div class="rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -175,7 +175,7 @@
       </div>
       <div class="col-4">
        <img src="images/product-10.jpg">
-       <h4>Red Printed T-Shirt</h4>
+       <h4>Used Thrice Shoes</h4>
        <div class="rating">
          <i class="fa fa-star"></i>
          <i class="fa fa-star"></i>
@@ -187,7 +187,7 @@
      </div>
      <div class="col-4">
        <img src="images/product-11.jpg">
-       <h4>Red Printed T-Shirt</h4>
+       <h4>Sold Separately Shoes</h4>
        <div class="rating">
          <i class="fa fa-star"></i>
          <i class="fa fa-star"></i>
@@ -199,7 +199,7 @@
      </div>
      <div class="col-4">
        <img src="images/product-12.jpg">
-       <h4>Red Printed T-Shirt</h4>
+       <h4>A Pant</h4>
        <div class="rating">
          <i class="fa fa-star"></i>
          <i class="fa fa-star"></i>
@@ -221,7 +221,7 @@
            <p>Exclusive Offer!</p>
            <h1>A Watch</h1>
            <small>Here is a watch that tells time. It's very important for getting to places on time! Here are some other types of watches you may be interested in: Neighborhood Watch and National Security Watch.</small>
-           <a href="" class="btn">Buy It Now! &#8658;</a>
+           <a href="" id="btn">Buy It Now! &#8658;</a>
           </div>
        </div>
      </div>
@@ -334,8 +334,9 @@
      </div>
    </div>
    <!-----JS for toggle menu----->
+   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
    <script>
-     var MenuItems = document.getElementsById("MenuItems");
+     var MenuItems = document.getElementById("MenuItems");
      MenuItems.style.maxHeight = "0px";
      function menutoggle(){
        if (MenuItems.style.maxHeight == "0px") {
@@ -344,6 +345,46 @@
          ManuItems.style.maxHeight = "0px";
        }
      }
+//     (function($) {
+//       $.fn.visible = function(partial) {
+//         var $t            = $(this),
+//             $w            = $(window),
+//             viewTop       = $w.scrollTop(),
+//             viewBottom    = viewTop + $w.height(),
+//             _top          = $t.offset().top,
+//             _bottom       = _top + $t.height(),
+//             compareTop    = partial === true ? _bottom : _top,
+//             compareBottom = partial === true ? _top : _bottom;
+//           return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+//     };
+//     })(jQuery);
+//     $(window).scroll(function(event) {
+//       $("html").each(function(i, el) {
+//         var el = $(el);
+//         if (el.visible(true)) {
+//           el.addClass("come-in");
+//         }
+//       })
+//     })
+//     var win = $(window);
+// var allMods = $("html");
+
+// // Already visible modules
+//   allMods.each(function(i, el) {
+//     var el = $(el);
+//     if (el.visible(true)) {
+//       el.addClass("already-visible");
+//     }
+//   });
+
+//   win.scroll(function(event) {
+//     allMods.each(function(i, el) {
+//       var el = $(el);
+//       if (el.visible(true)) {
+//         el.addClass("come-in");
+//       }
+//     });
+//   });
    </script>
 </body>
 </html>

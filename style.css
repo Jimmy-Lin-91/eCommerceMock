@@ -51,15 +51,66 @@ p{
 }
 .col-2 img {
   max-width: 100%;
+  position: relative;
   padding: 50px 0;
+  left: 500px;
+  -webkit-animation: slideLeft .5s forwards;
+  -moz-animation: slideLeft .5s forwards;
+  animation: slideLeft .5s forwards;
+}
+@-webkit-keyframes slideLeft {
+  100% { left: 0; }
+}
+
+@keyframes slideLeft {
+  100% { left: 0; }
 }
 .col-2 h1 {
   font-size: 50px;
-  padding-top: 10px;
+  padding-top: 30px;
+  position: relative;
+  top: 20%;
+  left: -100%;
+  -webkit-animations: slideRight .5s forwards;
+  -moz-animation: slideRight .5s forwards;
+  animation: slideRight .5s forwards;
+}
+.col-2-p, .col-2-btn {
+  position: relative;
+  top: 20%;
+  left: -100%;
+  -webkit-animations: slideRight .5s forwards;
+  -moz-animation: slideRight .5s forwards;
+  animation: slideRight .5s forwards;
+}
+
+@-webkit-keyframes slideRight{
+  from {left: -100%}
+  to {left: 0}
+}
+@keyframes slideRight{
+  from {left: -100%}
+  to {left: 0}
+}
+.col-2-img2{
+  position: absolute;
+  width: 20%;
+  transform: translateY(-500px);
+  -webkit-animation: fly .5s forwards;
+  -moz-animation: fly .5s forwards;
+  animation: slideRight .5s forwards;
+}
+@-webkit-keyframes fly{
+  from {left: 0}
+  to {right: -100%}
+}
+@keyframes fly{
+  from {left: 0}
+  to {right: -100%}
 }
 
 
-.btn{
+#btn{
   display: inline-block;
   background: #ff523b;
   color: #fff;
@@ -68,7 +119,7 @@ p{
   border-radius: 30px;
   transition: background 0.5s;
 }
-.btn:hover {
+#btn:hover {
   background: #563434;
 }
 .header{
@@ -258,6 +309,7 @@ ul{
   display: none;
 }
 
+
 /*Media Query*/
 
 @media only screen and (max-width: 800px) {
@@ -283,11 +335,15 @@ ul{
     display: block;
     cursor: pointer;
   }
+
 }
 
 /*Media Query for less than 600 screen size*/
 @media only screen and (max-width: 600px){
   .row{
     text-align: center;
+  }
+  .col-2, .col-3, .col-4 {
+    flex-basis: 100%;
   }
 }
